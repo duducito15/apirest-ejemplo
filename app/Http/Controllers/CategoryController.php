@@ -18,6 +18,12 @@ class CategoryController extends Controller
         }
         return response()->json(Category::find($id),200);
     }
-
+    //Agregar una categoria
+    public function insertCategory(Request $request){
+        $categoria = Category::create($request->all());
+        return response($categoria,200);
+    }
+    //Actualizar una categoria
+ 
 
 }
